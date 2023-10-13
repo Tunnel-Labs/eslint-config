@@ -63,7 +63,16 @@ const typescriptEslintRules = {
 	'@typescript-eslint/no-empty-interface': 'off',
 
 	// empty constructor pattern is too common
-	'@typescript-eslint/no-empty-function': 'off'
+	'@typescript-eslint/no-empty-function': 'off',
+	
+	// needed for typegeese
+	'@typescript-eslint/ban-ts-comment': 'off',
+
+	// empty object is useful
+	'@typescript-eslint/ban-types': 'off',
+
+	// needed in react
+	'@typescript-eslint/no-dynamic-delete': 'off'
 };
 
 module.exports = typescriptEslintRules;
