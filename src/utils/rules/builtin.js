@@ -96,7 +96,10 @@ const builtinRules = {
 
 	'no-self-assign': 'off',
 
-	'no-warning-comments': 'off'
+	'no-warning-comments': 'off',
+
+	// annoying af
+	'arrow-body-style': 'off'
 };
 
 module.exports = builtinRules;
