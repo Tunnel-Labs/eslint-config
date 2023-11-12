@@ -92,6 +92,16 @@ const builtinRules = {
 		}
 	],
 
+	'no-restricted-properties': [
+		'error',
+		// "destru" is more type-safe because it always returns `unknown`
+		{
+			object: 'JSON',
+			property: 'parse',
+			message: 'Use `destru` instead'
+		}
+	],
+
 	'lines-between-class-members': 'off',
 
 	'no-self-assign': 'off',
