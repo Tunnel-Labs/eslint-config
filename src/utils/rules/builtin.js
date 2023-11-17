@@ -87,6 +87,10 @@ const builtinRules = {
 				{
 					name: 'path',
 					message: 'Import from `pathe` instead'
+				},
+				{
+					name: 'zod',
+					message: 'Import from `@-/zod` instead'
 				}
 			]
 		}
