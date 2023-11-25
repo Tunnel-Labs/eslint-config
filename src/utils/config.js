@@ -141,6 +141,12 @@ exports.getRootEslintConfig = function getRootEslintConfig() {
 		overrides: [
 			...Object.entries(packageSlugpathsToEslintConfig).flatMap(
 				([packageSlugpath, packageEslintConfig]) => [
+					...(packageEslintConfig.overrides ?? []).map((override) => ({
+						...override,
+						files: override.files.map((fileGlob) =>
+							path.join(packageSlugpath, fileGlob)
+						)
+					})),
 					{
 						files: [
 							`${packageSlugpath}/**/*.ts`,
