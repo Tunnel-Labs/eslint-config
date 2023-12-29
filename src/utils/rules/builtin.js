@@ -76,6 +76,15 @@ const builtinRules = {
 	'import/no-anonymous-default-export': 'off',
 	'prefer-arrow-callback': 'off',
 
+	'no-restricted-globals': [
+		'error',
+		{
+			name: 'URL',
+			message:
+				"Use `safer-url` instead as it doesn't throw an error on invalid URLs"
+		}
+	],
+
 	'no-restricted-imports': [
 		'error',
 		{
