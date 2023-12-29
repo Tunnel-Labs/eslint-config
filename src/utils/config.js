@@ -145,7 +145,10 @@ exports.getRootEslintConfig = function getRootEslintConfig() {
 						...override,
 						files: override.files.map((fileGlob) =>
 							path.join(packageSlugpath, fileGlob)
-						)
+						),
+						parser: require.resolve('@typescript-eslint/parser'),
+						plugins: undefined,
+						extends: require.resolve('./extends-and-plugins/typescript-extras')
 					})),
 					{
 						files: [
