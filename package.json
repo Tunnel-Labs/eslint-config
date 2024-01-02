@@ -1,10 +1,11 @@
 {
 	"name": "@tunnel/eslint-config",
-	"version": "0.0.6",
+	"version": "0.0.7",
 	"type": "commonjs",
 	"exports": "./src/index.js",
 	"dependencies": {
 		"@rushstack/eslint-patch": "^1.5.1",
+		"@tunnel/eslint-plugin-neverthrow": "^0.0.1",
 		"@typescript-eslint/eslint-plugin": "^6.7.5",
 		"@typescript-eslint/parser": "^6.7.5",
 		"change-case": "^5.0.2",
@@ -20,7 +21,6 @@
 		"eslint-plugin-jsonc": "^2.10.0",
 		"eslint-plugin-markdown": "^3.0.1",
 		"eslint-plugin-n": "^16.2.0",
-		"eslint-plugin-neverthrow": "^1.1.4",
 		"eslint-plugin-react": "^7.33.2",
 		"eslint-plugin-react-hooks": "^4.6.0",
 		"eslint-plugin-simple-import-sort": "^10.0.0",
