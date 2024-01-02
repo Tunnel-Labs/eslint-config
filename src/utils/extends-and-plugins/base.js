@@ -20,7 +20,7 @@ const extendsAndPlugins = defineConfig({
 		'eslint-comments',
 		'html',
 		'n',
-		'@tunnel/neverthrow',
+		require.resolve('@tunnel/eslint-plugin-neverthrow'),
 		'import',
 		// '@-/tunnel',
 		// Automatically sorts the imports so you don't have to worry about it

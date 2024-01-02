@@ -1,11 +1,11 @@
 {
 	"name": "@tunnel/eslint-config",
-	"version": "0.0.7",
+	"version": "0.0.8",
 	"type": "commonjs",
 	"exports": "./src/index.js",
 	"dependencies": {
 		"@rushstack/eslint-patch": "^1.5.1",
-		"@tunnel/eslint-plugin-neverthrow": "^0.0.1",
+		"@tunnel/eslint-plugin-neverthrow": "^0.0.2",
 		"@typescript-eslint/eslint-plugin": "^6.7.5",
 		"@typescript-eslint/parser": "^6.7.5",
 		"change-case": "^5.0.2",
