@@ -64,7 +64,7 @@ const typescriptEslintRules = {
 
 	// empty constructor pattern is too common
 	'@typescript-eslint/no-empty-function': 'off',
-	
+
 	// needed for typegeese
 	'@typescript-eslint/ban-ts-comment': 'off',
 
@@ -72,7 +72,9 @@ const typescriptEslintRules = {
 	'@typescript-eslint/ban-types': 'off',
 
 	// needed in react
-	'@typescript-eslint/no-dynamic-delete': 'off'
+	'@typescript-eslint/no-dynamic-delete': 'off',
+
+	'@tunnel/neverthrow/must-use-result': 'error'
 };
 
 module.exports = typescriptEslintRules;

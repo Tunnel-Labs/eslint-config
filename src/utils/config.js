@@ -109,9 +109,6 @@ exports.getRootEslintConfig = function getRootEslintConfig() {
 			...builtinRules,
 			...eslintPluginUnicornRules,
 
-			// TODO: publish @tunnel/eslint-plugin
-			// '@-/tunnel/specify-invariant-message': 'error',
-
 			'simple-import-sort/imports': 'warn',
 			'simple-import-sort/exports': 'warn',
 

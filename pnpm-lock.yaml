@@ -8,6 +8,9 @@ dependencies:
   '@rushstack/eslint-patch':
     specifier: ^1.5.1
     version: 1.5.1
+  '@tunnel/eslint-plugin-neverthrow':
+    specifier: ^0.0.2
+    version: 0.0.2(@typescript-eslint/parser@6.7.5)(eslint@8.51.0)(typescript@5.2.2)
   '@typescript-eslint/eslint-plugin':
     specifier: ^6.7.5
     version: 6.7.5(@typescript-eslint/parser@6.7.5)(eslint@8.51.0)(typescript@5.2.2)
@@ -53,9 +56,6 @@ dependencies:
   eslint-plugin-n:
     specifier: ^16.2.0
     version: 16.2.0(eslint@8.51.0)
-  eslint-plugin-neverthrow:
-    specifier: ^1.1.4
-    version: 1.1.4(@typescript-eslint/parser@6.7.5)(eslint@8.51.0)(typescript@5.2.2)
   eslint-plugin-react:
     specifier: ^7.33.2
     version: 7.33.2(eslint@8.51.0)
@@ -220,6 +220,22 @@ packages:
     resolution: {integrity: sha512-6i/8UoL0P5y4leBIGzvkZdS85RDMG9y1ihZzmTZQ5LdHUYmZ7pKFoj8X0236s3lusPs1Fa5HTQUpwI+UfTcmeA==}
     dev: false
 
+  /@tunnel/eslint-plugin-neverthrow@0.0.2(@typescript-eslint/parser@6.7.5)(eslint@8.51.0)(typescript@5.2.2):
+    resolution: {integrity: sha512-AShNs1VI6kS2m/zEPPKCPizRtikpoTCZLZfZyeccmbt/iKNhFZbk0Gs1frzp60F6EwdCpZxRc5QMuo/fGOVXkQ==}
+    engines: {node: '>=14.17'}
+    peerDependencies:
+      '@typescript-eslint/parser': ^6
+      eslint: ^8
+    dependencies:
+      '@types/eslint-utils': 3.0.5
+      '@typescript-eslint/parser': 6.7.5(eslint@8.51.0)(typescript@5.2.2)
+      eslint: 8.51.0
+      eslint-utils: 3.0.0(eslint@8.51.0)
+      tsutils: 3.21.0(typescript@5.2.2)
+    transitivePeerDependencies:
+      - typescript
+    dev: false
+
   /@types/eslint-utils@3.0.5:
     resolution: {integrity: sha512-dGOLJqHXpjomkPgZiC7vnVSJtFIOM1Y6L01EyUhzPuD0y0wfIGiqxiGs3buUBfzxLIQHrCvZsIMDaCZ8R5IIoA==}
     dependencies:
@@ -298,8 +314,6 @@ packages:
       eslint: ^7.0.0 || ^8.0.0
       typescript: '*'
     peerDependenciesMeta:
-      eslint:
-        optional: true
       typescript:
         optional: true
     dependencies:
@@ -1028,9 +1042,6 @@ packages:
     engines: {node: '>=6.5.0'}
     peerDependencies:
       eslint: '>=4.19.1'
-    peerDependenciesMeta:
-      eslint:
-        optional: true
     dependencies:
       escape-string-regexp: 1.0.5
       eslint: 8.51.0
@@ -1144,22 +1155,6 @@ packages:
       minimatch: 3.1.2
       resolve: 1.22.8
       semver: 7.5.4
-    dev: false
-
-  /eslint-plugin-neverthrow@1.1.4(@typescript-eslint/parser@6.7.5)(eslint@8.51.0)(typescript@5.2.2):
-    resolution: {integrity: sha512-+8zsE5rDqsDfKYAOq0Fr2jbuxHXTmntIWWJqJA3ms1GAKcVCjl0ycetzOu/hTxot9ctr+WYQpCBgB3F2HATR7A==}
-    engines: {node: '>=14.17'}
-    peerDependencies:
-      '@typescript-eslint/parser': '>=4.20.0'
-      eslint: '>=5.16.0'
-    dependencies:
-      '@types/eslint-utils': 3.0.5
-      '@typescript-eslint/parser': 6.7.5(eslint@8.51.0)(typescript@5.2.2)
-      eslint: 8.51.0
-      eslint-utils: 3.0.0(eslint@8.51.0)
-      tsutils: 3.21.0(typescript@5.2.2)
-    transitivePeerDependencies:
-      - typescript
     dev: false
 
   /eslint-plugin-react-hooks@4.6.0(eslint@8.51.0):

@@ -9,7 +9,6 @@ const extendsAndPlugins = defineConfig({
 		'plugin:unicorn/recommended',
 		'plugin:yml/standard',
 		'plugin:jsonc/recommended-with-jsonc',
-		'plugin:@tunnel/neverthrow/recommended',
 		// TODO: fix linting markdown with TypeScript
 		// 'plugin:markdown/recommended',
 		// Make sure rules don't conflict with Prettier formatting
@@ -20,7 +19,6 @@ const extendsAndPlugins = defineConfig({
 		'eslint-comments',
 		'html',
 		'n',
-		require.resolve('@tunnel/eslint-plugin-neverthrow'),
 		'import',
 		// '@-/tunnel',
 		// Automatically sorts the imports so you don't have to worry about it
