@@ -19,6 +19,7 @@ const extendsAndPlugins = defineConfig({
 		'eslint-comments',
 		'html',
 		'n',
+		'neverthrow',
 		'import',
 		// '@-/tunnel',
 		// Automatically sorts the imports so you don't have to worry about it
