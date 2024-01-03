@@ -109,9 +109,6 @@ exports.getRootEslintConfig = function getRootEslintConfig() {
 			...builtinRules,
 			...eslintPluginUnicornRules,
 
-			'simple-import-sort/imports': 'warn',
-			'simple-import-sort/exports': 'warn',
-
 			'import/extensions': [
 				'error',
 				'ignorePackages',

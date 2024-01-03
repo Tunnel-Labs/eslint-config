@@ -21,8 +21,8 @@ const extendsAndPlugins = defineConfig({
 		'n',
 		'import',
 		// '@-/tunnel',
-		// Automatically sorts the imports so you don't have to worry about it
-		'simple-import-sort',
+		// We use `dprint` for sorting imports
+		// 'simple-import-sort',
 		'react',
 		'react-hooks',
 		'unused-imports',
