@@ -74,7 +74,7 @@ const typescriptEslintRules = {
 	// needed in react
 	'@typescript-eslint/no-dynamic-delete': 'off',
 
-	'@tunnel/neverthrow/must-use-result': 'error'
+	'errok/must-use-result': 'error'
 };
 
 module.exports = typescriptEslintRules;
