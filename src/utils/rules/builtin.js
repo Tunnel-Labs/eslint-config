@@ -122,7 +122,7 @@ const builtinRules = {
 	'no-warning-comments': 'off',
 
 	// annoying af
-	'arrow-body-style': 'off'
+	'arrow-body-style': 'off',
 };
 
 module.exports = builtinRules;

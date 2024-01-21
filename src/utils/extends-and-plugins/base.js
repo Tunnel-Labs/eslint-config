@@ -15,6 +15,7 @@ const extendsAndPlugins = defineConfig({
 		'prettier'
 	],
 	plugins: [
+		'codegen',
 		'eslint-plugin-unicorn',
 		'eslint-comments',
 		'html',

@@ -154,7 +154,13 @@ exports.getRootEslintConfig = function getRootEslintConfig() {
 						extends: require.resolve('./extends-and-plugins/typescript-extras'),
 						rules: {
 							...typescriptEslintRules,
-							...packageEslintConfig.rules
+							...packageEslintConfig.rules,
+							'codegen/codegen': [
+								'error',
+								{
+									presets: require('./codegen/glob-import.js')
+								}
+							]
 						}
 					},
 					{
