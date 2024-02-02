@@ -130,7 +130,12 @@ exports.getRootEslintConfig = function getRootEslintConfig() {
 			'eslint-comments/no-aggregating-enable': 'error',
 			'eslint-comments/no-duplicate-disable': 'error',
 			'eslint-comments/no-unused-enable': 'error',
-			'eslint-comments/require-description': 'error'
+			'eslint-comments/require-description': 'error',
+
+			'@tunnel/no-relative-import-paths/no-relative-import-paths': [
+				'warn',
+				{ allowSameFolder: true }
+			]
 		},
 		overrides: [
 			...Object.entries(packageSlugpathsToEslintConfig).flatMap(

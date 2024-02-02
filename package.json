@@ -1,10 +1,11 @@
 {
 	"name": "@tunnel/eslint-config",
-	"version": "0.0.13",
+	"version": "0.0.14",
 	"type": "commonjs",
-	"exports": "./src/index.js",
+	"exports": "./index.js",
 	"dependencies": {
 		"@rushstack/eslint-patch": "^1.5.1",
+		"@tunnel/eslint-plugin-no-relative-import-paths": "^0.0.0",
 		"@typescript-eslint/eslint-plugin": "~6.18.1",
 		"@typescript-eslint/parser": "~6.18.1",
 		"change-case": "^5.0.2",
@@ -40,5 +41,9 @@
 	},
 	"devDependencies": {
 		"@typescript-eslint/utils": "~6.18.1"
-	}
+	},
+	"files": [
+		"index.js",
+		"utils"
+	]
 }
