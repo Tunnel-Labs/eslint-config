@@ -21,7 +21,7 @@ const extendsAndPlugins = defineConfig({
 		'html',
 		'n',
 		'import',
-		// '@-/tunnel',
+		'@tunnel/no-relative-import-paths',
 		// We use `dprint` for sorting imports
 		// 'simple-import-sort',
 		'react',

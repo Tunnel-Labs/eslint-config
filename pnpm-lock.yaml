@@ -9,8 +9,8 @@ dependencies:
     specifier: ^1.5.1
     version: 1.5.1
   '@tunnel/eslint-plugin-no-relative-import-paths':
-    specifier: ^0.0.0
-    version: 0.0.0
+    specifier: ^0.0.3
+    version: 0.0.3
   '@typescript-eslint/eslint-plugin':
     specifier: ~6.18.1
     version: 6.18.1(@typescript-eslint/parser@6.18.1)(eslint@8.51.0)(typescript@5.2.2)
@@ -566,8 +566,10 @@ packages:
     resolution: {integrity: sha512-+Fj43pSMwJs4KRrH/938Uf+uAELIgVBmQzg/q1YG10djyfA3TnrU8N8XzqCh/okZdszqBQTZf96idMfE5lnwTA==}
     dev: false
 
-  /@tunnel/eslint-plugin-no-relative-import-paths@0.0.0:
-    resolution: {integrity: sha512-9hZYJH5FVpYFFj2SCNfGsDkaF1Lv5H2wNeLA0Ki/D03bF8U6uG1+/5jYKeTytlW64lU8zja6uJPBYxcruAJcyg==}
+  /@tunnel/eslint-plugin-no-relative-import-paths@0.0.3:
+    resolution: {integrity: sha512-WfLDPvxlrI7Pl7ZRmMX2vPsJFTUXTMuNAcEWZQcEpXPP31Xfuacn0zThikhUNX/RPaUhdPB9zMQimX+n82qppQ==}
+    dependencies:
+      pkg-dir: 4.2.0
     dev: false
 
   /@types/dedent@0.7.0:
@@ -2928,6 +2930,13 @@ packages:
   /picomatch@2.3.1:
     resolution: {integrity: sha512-JU3teHTNjmE2VCGFzuY8EXzCDVwEqB2a8fsIvwaStHhAWJEeVd1o1QD80CU6+ZdEXXSLbSsuLwJjkCBWqRQUVA==}
     engines: {node: '>=8.6'}
+
+  /pkg-dir@4.2.0:
+    resolution: {integrity: sha512-HRDzbaKjC+AOWVXxAU/x54COGeIv9eb+6CkDSQoNTt4XyWoIJvuPsXizxu/Fr23EiekbtZwmh1IcIG/l/a10GQ==}
+    engines: {node: '>=8'}
+    dependencies:
+      find-up: 4.1.0
+    dev: false
 
   /pluralize@8.0.0:
     resolution: {integrity: sha512-Nc3IT5yHzflTfbjgqWcCPpo7DaKy4FnpB0l/zCAW0Tc7jxAiuqSxHasntB3D7887LSrA93kDJ9IXovxJYxyLCA==}

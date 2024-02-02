@@ -139,6 +139,13 @@ exports.getRootEslintConfig = function getRootEslintConfig() {
 				'warn',
 				{ allowSameFolder: true },
 			],
+
+			'import/no-duplicates': ['error', { 'prefer-inline': true }]
+		},
+		settings: {
+			react: {
+				version: 'detect',
+			},
 		},
 		overrides: [
 			...Object.entries(packageSlugpathsToEslintConfig).flatMap(
@@ -313,14 +320,10 @@ exports.defineNextAppConfig = function defineNextAppConfig(config = {}) {
 				},
 				globals: { Bun: true },
 				plugins: [
-					// '@-/tunnel',
 					'import',
 				],
 				rules: {
 					'react/jsx-no-undef': ['error', { allowGlobals: true }],
-					// We use arrow functions in valtio
-					'object-shorthand': 'off',
-					'unicorn/no-abusive-eslint-disable': 'off',
 					'@typescript-eslint/no-use-before-define': 'off',
 					'react/no-unescaped-entities': 'off',
 					'react-hooks/exhaustive-deps': ['error'],
@@ -331,11 +334,6 @@ exports.defineNextAppConfig = function defineNextAppConfig(config = {}) {
 					],
 					'unicorn/prefer-top-level-await': 'off',
 					'import/extensions': 'off',
-				},
-				settings: {
-					react: {
-						version: 'detect',
-					},
 				},
 			},
 			config,
