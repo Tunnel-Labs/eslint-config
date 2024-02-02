@@ -18,7 +18,10 @@ exports.getRootEslintConfig = function getRootEslintConfig() {
 
 	const packageSlugpathsToEslintConfig = (() => {
 		const pnpmWorkspace = JSON.parse(
-			fs.readFileSync(path.join(monorepoDirpath, 'pnpm-workspace.yaml'), 'utf8')
+			fs.readFileSync(
+				path.join(monorepoDirpath, 'pnpm-workspace.yaml'),
+				'utf8',
+			),
 		);
 		const packageGlobs = pnpmWorkspace.packages;
 
@@ -35,11 +38,11 @@ exports.getRootEslintConfig = function getRootEslintConfig() {
 				const packageEslintConfigPath = path.join(
 					packageCategoryPath,
 					packageSlug,
-					'eslint.cjs'
+					'eslint.cjs',
 				);
-				const packageEslintConfig = fs.existsSync(packageEslintConfigPath)
-					? require(packageEslintConfigPath)
-					: {};
+				const packageEslintConfig = fs.existsSync(packageEslintConfigPath) ?
+					require(packageEslintConfigPath) :
+					{};
 
 				packageSlugpathsToEslintConfig[packageSlugpath] = packageEslintConfig;
 			}
@@ -77,8 +80,8 @@ exports.getRootEslintConfig = function getRootEslintConfig() {
 			([packageSlugpath, packageEslintConfig]) =>
 				(packageEslintConfig.ignorePatterns ?? []).map((ignorePattern) =>
 					path.join(packageSlugpath, ignorePattern)
-				)
-		)
+				),
+		),
 	];
 
 	const config = defineESLintConfig({
@@ -95,7 +98,7 @@ exports.getRootEslintConfig = function getRootEslintConfig() {
 			project: path.join(monorepoDirpath, 'tsconfig.node16.json'),
 			ecmaVersion: 2022,
 			sourceType: 'module',
-			extraFileExtensions: ['.vue', '.json', '.jsonc', '.md']
+			extraFileExtensions: ['.vue', '.json', '.jsonc', '.md'],
 		},
 
 		/**
@@ -116,16 +119,16 @@ exports.getRootEslintConfig = function getRootEslintConfig() {
 					js: 'always',
 					jsx: 'always',
 					ts: 'always',
-					tsx: 'always'
-				}
+					tsx: 'always',
+				},
 			],
 			// Copied from https://github.com/xojs/xo/blob/ce76e496fdb80a2a6fb33609afd108ddab230e7f/config/plugins.cjs#L353
 			'eslint-comments/no-unused-disable': 'off',
 			'eslint-comments/disable-enable-pair': [
 				'error',
 				{
-					allowWholeFile: true
-				}
+					allowWholeFile: true,
+				},
 			],
 			'eslint-comments/no-aggregating-enable': 'error',
 			'eslint-comments/no-duplicate-disable': 'error',
@@ -134,8 +137,8 @@ exports.getRootEslintConfig = function getRootEslintConfig() {
 
 			'@tunnel/no-relative-import-paths/no-relative-import-paths': [
 				'warn',
-				{ allowSameFolder: true }
-			]
+				{ allowSameFolder: true },
+			],
 		},
 		overrides: [
 			...Object.entries(packageSlugpathsToEslintConfig).flatMap(
@@ -147,12 +150,12 @@ exports.getRootEslintConfig = function getRootEslintConfig() {
 						),
 						parser: require.resolve('@typescript-eslint/parser'),
 						plugins: undefined,
-						extends: require.resolve('./extends-and-plugins/typescript-extras')
+						extends: require.resolve('./extends-and-plugins/typescript-extras'),
 					})),
 					{
 						files: [
 							`${packageSlugpath}/**/*.ts`,
-							`${packageSlugpath}/**/*.tsx`
+							`${packageSlugpath}/**/*.tsx`,
 						],
 						parser: require.resolve('@typescript-eslint/parser'),
 						plugins: undefined,
@@ -163,18 +166,18 @@ exports.getRootEslintConfig = function getRootEslintConfig() {
 							'codegen/codegen': [
 								'error',
 								{
-									presets: require('./codegen/glob-import.js')
-								}
-							]
-						}
+									presets: require('./codegen/glob-import.js'),
+								},
+							],
+						},
 					},
 					{
 						files: [`${packageSlugpath}/**/*.*`],
 						rules: {
-							...packageEslintConfig.rules
-						}
-					}
-				]
+							...packageEslintConfig.rules,
+						},
+					},
+				],
 			),
 			// Config inspired by https://github.com/antfu/eslint-config/blob/main/packages/basic/index.js
 			{
@@ -192,8 +195,8 @@ exports.getRootEslintConfig = function getRootEslintConfig() {
 					'no-restricted-imports': 'off',
 					'no-undef': 'off',
 					'no-unused-expressions': 'off',
-					'no-unused-vars': 'off'
-				}
+					'no-unused-vars': 'off',
+				},
 			},
 			{
 				files: ['*.json', '*.json5'],
@@ -205,19 +208,19 @@ exports.getRootEslintConfig = function getRootEslintConfig() {
 					'jsonc/indent': ['error', 'tab'],
 					'jsonc/key-spacing': [
 						'error',
-						{ beforeColon: false, afterColon: true }
+						{ beforeColon: false, afterColon: true },
 					],
 					'jsonc/no-octal-escape': 'error',
 					'jsonc/object-curly-newline': [
 						'error',
-						{ multiline: true, consistent: true }
+						{ multiline: true, consistent: true },
 					],
 					'jsonc/object-curly-spacing': ['error', 'always'],
 					'jsonc/object-property-newline': [
 						'error',
-						{ allowMultiplePropertiesPerLine: true }
-					]
-				}
+						{ allowMultiplePropertiesPerLine: true },
+					],
+				},
 			},
 			{
 				files: ['package.json'],
@@ -270,21 +273,21 @@ exports.getRootEslintConfig = function getRootEslintConfig() {
 								'husky',
 								'simple-git-hooks',
 								'lint-staged',
-								'eslintConfig'
-							]
+								'eslintConfig',
+							],
 						},
 						{
 							pathPattern: '^(?:dev|peer|optional|bundled)?[Dd]ependencies$',
-							order: { type: 'asc' }
+							order: { type: 'asc' },
 						},
 						{
 							pathPattern: '^exports.*$',
-							order: ['types', 'require', 'import']
-						}
-					]
-				}
-			}
-		]
+							order: ['types', 'require', 'import'],
+						},
+					],
+				},
+			},
+		],
 	});
 
 	return config;
@@ -306,12 +309,12 @@ exports.defineNextAppConfig = function defineNextAppConfig(config = {}) {
 				env: {
 					es6: true,
 					node: true,
-					browser: true
+					browser: true,
 				},
 				globals: { Bun: true },
 				plugins: [
 					// '@-/tunnel',
-					'import'
+					'import',
 				],
 				rules: {
 					'react/jsx-no-undef': ['error', { allowGlobals: true }],
@@ -324,18 +327,18 @@ exports.defineNextAppConfig = function defineNextAppConfig(config = {}) {
 					'@typescript-eslint/no-non-null-assertion': 'error',
 					'react/no-unknown-property': [
 						'error',
-						{ ignore: ['css', 'global', 'jsx'] }
+						{ ignore: ['css', 'global', 'jsx'] },
 					],
 					'unicorn/prefer-top-level-await': 'off',
-					'import/extensions': 'off'
+					'import/extensions': 'off',
 				},
 				settings: {
 					react: {
-						version: 'detect'
-					}
-				}
+						version: 'detect',
+					},
+				},
 			},
-			config
-		)
+			config,
+		),
 	);
 };

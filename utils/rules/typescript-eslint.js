@@ -18,8 +18,8 @@ const typescriptEslintRules = {
 	'@typescript-eslint/consistent-type-imports': [
 		'error',
 		{
-			disallowTypeAnnotations: false
-		}
+			disallowTypeAnnotations: false,
+		},
 	],
 
 	'@typescript-eslint/unbound-method': 'off',
@@ -74,7 +74,7 @@ const typescriptEslintRules = {
 	// needed in react
 	'@typescript-eslint/no-dynamic-delete': 'off',
 
-	'errok/must-use-result': 'error'
+	'errok/must-use-result': 'error',
 };
 
 module.exports = typescriptEslintRules;

@@ -12,7 +12,7 @@ const extendsAndPlugins = defineConfig({
 		// TODO: fix linting markdown with TypeScript
 		// 'plugin:markdown/recommended',
 		// Make sure rules don't conflict with Prettier formatting
-		'prettier'
+		'prettier',
 	],
 	plugins: [
 		'codegen',
@@ -27,8 +27,8 @@ const extendsAndPlugins = defineConfig({
 		'react',
 		'react-hooks',
 		'unused-imports',
-		'eslint-plugin-deprecation'
-	]
+		'eslint-plugin-deprecation',
+	],
 });
 
 module.exports = extendsAndPlugins;

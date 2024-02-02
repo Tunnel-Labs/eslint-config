@@ -74,8 +74,8 @@ const eslintPluginUnicornRules = {
 		'error',
 		{
 			case: 'kebabCase',
-			ignore: [/^(-|_).*/, /^\[.*]$/]
-		}
+			ignore: [/^(-|_).*/, /^\[.*]$/],
+		},
 	],
 
 	'unicorn/prefer-event-target': 'off',
@@ -83,7 +83,7 @@ const eslintPluginUnicornRules = {
 	/**
 		False positives with `Model.find({} satisfies T);`
 	*/
-	'unicorn/no-array-callback-reference': 'off'
+	'unicorn/no-array-callback-reference': 'off',
 };
 
 module.exports = eslintPluginUnicornRules;

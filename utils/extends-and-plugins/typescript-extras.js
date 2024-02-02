@@ -6,8 +6,8 @@ const extendsAndPluginsTypescriptExtras = defineConfig({
 		'plugin:@typescript-eslint/recommended',
 		'plugin:@typescript-eslint/recommended-requiring-type-checking',
 		'plugin:@typescript-eslint/strict',
-		'prettier'
-	]
+		'prettier',
+	],
 });
 
 module.exports = extendsAndPluginsTypescriptExtras;

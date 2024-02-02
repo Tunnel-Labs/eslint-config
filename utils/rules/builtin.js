@@ -69,8 +69,8 @@ const builtinRules = {
 			vars: 'all',
 			varsIgnorePattern: '^_',
 			args: 'after-used',
-			argsIgnorePattern: '^_'
-		}
+			argsIgnorePattern: '^_',
+		},
 	],
 
 	'import/no-anonymous-default-export': 'off',
@@ -81,8 +81,8 @@ const builtinRules = {
 		{
 			name: 'URL',
 			message:
-				"Use `safer-url` instead as it doesn't throw an error on invalid URLs"
-		}
+				"Use `safer-url` instead as it doesn't throw an error on invalid URLs",
+		},
 	],
 
 	'no-restricted-imports': [
@@ -91,18 +91,18 @@ const builtinRules = {
 			paths: [
 				{
 					name: 'node:path',
-					message: 'Import from `pathe` instead'
+					message: 'Import from `pathe` instead',
 				},
 				{
 					name: 'path',
-					message: 'Import from `pathe` instead'
+					message: 'Import from `pathe` instead',
 				},
 				{
 					name: 'zod',
-					message: 'Import from `@-/zod` instead'
-				}
-			]
-		}
+					message: 'Import from `@-/zod` instead',
+				},
+			],
+		},
 	],
 
 	'no-restricted-properties': [
@@ -111,8 +111,8 @@ const builtinRules = {
 		{
 			object: 'JSON',
 			property: 'parse',
-			message: 'Use `destru` instead'
-		}
+			message: 'Use `destru` instead',
+		},
 	],
 
 	'lines-between-class-members': 'off',

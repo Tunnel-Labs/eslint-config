@@ -3,6 +3,9 @@
 	"version": "0.0.14",
 	"type": "commonjs",
 	"exports": "./index.js",
+	"scripts": {
+		"format": "dprint fmt"
+	},
 	"dependencies": {
 		"@rushstack/eslint-patch": "^1.5.1",
 		"@tunnel/eslint-plugin-no-relative-import-paths": "^0.0.0",
@@ -40,7 +43,8 @@
 		"yaml-eslint-parser": "^1.2.2"
 	},
 	"devDependencies": {
-		"@typescript-eslint/utils": "~6.18.1"
+		"@typescript-eslint/utils": "~6.18.1",
+		"dprint": "0.45.0"
 	},
 	"files": [
 		"index.js",

@@ -11,7 +11,7 @@ const { getMonorepoDirpath } = require('get-monorepo-root');
 exports.globImport = ({ context, options }) => {
 	const monorepoDirpath = getMonorepoDirpath(context.physicalFilename);
 	const { getGlobfileContents, getGlobfilePath } = createGlobfileManager({
-		monorepoDirpath
+		monorepoDirpath,
 	});
 	const globfileType = options.type ?? 'matches';
 	return getGlobfileContents({
@@ -19,10 +19,10 @@ exports.globImport = ({ context, options }) => {
 			globfileModuleSpecifier: `glob${
 				globfileType === 'matches' ? '' : `[${globfileType}]`
 			}:${options.pattern}`,
-			importerFilepath: context.physicalFilename
+			importerFilepath: context.physicalFilename,
 		}),
 		importerFilepath: context.physicalFilename,
 		filepathType: 'relative',
-		moduleType: options.moduleType ?? 'module'
+		moduleType: options.moduleType ?? 'module',
 	});
 };
