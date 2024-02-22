@@ -70,13 +70,7 @@ const eslintPluginUnicornRules = {
 	/**
 		We want to allow files that start with an underscore or a hyphen (since those have special meaning in Next.js/Docusaurus) and we also want to allow files that are surrounded by square brackets (since those are used for dynamic routes in Next.js).
 	 */
-	'unicorn/filename-case': [
-		'error',
-		{
-			case: 'kebabCase',
-			ignore: [/^(-|_).*/, /^\[.*]$/],
-		},
-	],
+	'unicorn/filename-case': 'off',
 
 	'unicorn/prefer-event-target': 'off',
 
