@@ -95,7 +95,7 @@ exports.getRootEslintConfig = function getRootEslintConfig() {
 		reportUnusedDisableDirectives: false,
 
 		parserOptions: {
-			project: path.join(monorepoDirpath, 'tsconfig.node16.json'),
+			project: path.join(monorepoDirpath, 'tsconfig.json'),
 			ecmaVersion: 2022,
 			sourceType: 'module',
 			extraFileExtensions: ['.vue', '.json', '.jsonc', '.md'],

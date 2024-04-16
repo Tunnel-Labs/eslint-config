@@ -123,6 +123,8 @@ const builtinRules = {
 
 	// annoying af
 	'arrow-body-style': 'off',
+
+	'require-yield': 'off',
 };
 
 module.exports = builtinRules;
